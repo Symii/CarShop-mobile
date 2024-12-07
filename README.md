@@ -1,16 +1,48 @@
-# CarShop
+# **CarShop Mobile App**
 
-A new Flutter project.
+CarShop to mobilna aplikacja na system Android, stworzona w technologii Flutter. Umożliwia użytkownikom przeglądanie, dodawanie i zarządzanie ogłoszeniami sprzedaży samochodów. Aplikacja została zaprojektowana z myślą o intuicyjności, szybkości i wygodzie użytkowania.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## **Funkcje aplikacji**
 
-A few resources to get you started if this is your first Flutter project:
+### **Dla kupujących**
+- **Zaawansowane wyszukiwanie**  
+  Filtruj ogłoszenia według marki, modelu, rocznika, przebiegu, ceny, rodzaju paliwa i innych parametrów.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Szczegółowe ogłoszenia**  
+  Oglądaj zdjęcia, czytaj szczegółowe opisy i sprawdzaj lokalizację samochodów.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### **Dla sprzedających**
+- **Szybkie dodawanie ogłoszeń**  
+  Intuicyjny formularz umożliwia dodanie ogłoszenia w kilku krokach.
+- 
+---
+
+## **Technologie**
+
+Aplikacja została stworzona z użyciem następujących technologii:
+- **Framework**: Flutter (Dart)
+- **Baza danych**: MySQL
+
+---
+
+## **Planowane**
+
+### **Dla kupujących**
+- **Lista ulubionych**  
+  Zapisuj interesujące ogłoszenia, aby łatwo do nich wrócić.
+
+### **Dla sprzedających**
+- **Zarządzanie ogłoszeniami**  
+  Edytuj, wznawiaj lub usuwaj swoje ogłoszenia.
+
+- **Statystyki**  
+  Śledź, jak często Twoje ogłoszenie jest oglądane przez użytkowników.
+
+### **Dla dealerów samochodowych**
+- **Konta biznesowe**  
+  Zarządzaj wieloma ogłoszeniami z jednego miejsca.
+
+- **Pakiety ogłoszeń**  
+  Korzystaj z ofert promocyjnych dla dealerów.
