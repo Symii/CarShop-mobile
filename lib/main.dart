@@ -1,29 +1,49 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2dfghgf/chat_screen.dart';
-import 'package:untitled2dfghgf/sell_screen.dart';
-
-import 'profile_screen.dart';
-import 'home_screen.dart';
-import 'favorite_screen.dart';
+import 'vehicle_list_page.dart';  // Lista pojazdów
+import 'add_vehicle_page.dart';  // Dodawanie ogłoszenia
+import 'user_account_page.dart'; // Konto użytkownika
+import 'empty_state_page.dart';   // Pusty stan (Ulubione, Wiadomości)
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sprzedaż Pojazdów',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        appBarTheme: AppBarTheme(backgroundColor: Colors.blue),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.blue, // Kolor tła menu dolnego
+          selectedItemColor: Colors.white, // Kolor wybranych ikon i tekstu
+          unselectedItemColor: Colors.white70, // Kolor nie wybranych ikon i tekstu
+          showUnselectedLabels: true, // Pokazywanie etykiet dla niewybranych elementów
+        ),
+      ),
+      home: MainPage(),
+    );
+  }
 }
 
-class _MyAppState extends State<MyApp> {
+class MainPage extends StatefulWidget {
+  @override
+  _MainPageState createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
+  // Lista widoków (ekranów)
   final List<Widget> _screens = [
-    HomeScreen(),
-    FavoriteScreen(),
-    SellScreen(),
-    ChatScreen(),
-    ProfileScreen(),
+    VehicleListPage(),   // Kupujesz - lista pojazdów
+    EmptyStatePage(title: 'Ulubione'),  // Ulubione (empty state)
+    AddVehiclePage(onAddVehicle: (make, model, year, price) {}),  // Sprzedaż - dodawanie pojazdu
+    EmptyStatePage(title: 'Wiadomości'),  // Wiadomości (empty state)
+    UserAccountPage(),   // Konto użytkownika
   ];
 
   void _onItemTapped(int index) {

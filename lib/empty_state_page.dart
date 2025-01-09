@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SellScreen extends StatelessWidget {
+class EmptyStatePage extends StatelessWidget {
+  final String title;
+
+  EmptyStatePage({required this.title});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Empty State Screen'),
+        title: Text('Brak wyników'),
       ),
       body: Center(
         child: Column(

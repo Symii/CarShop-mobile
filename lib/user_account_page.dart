@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'edit_profile_screen.dart';
 
-class ProfileScreen extends StatefulWidget {
+class UserAccountPage extends StatefulWidget {
   @override
-  _ProfileScreenState createState() => _ProfileScreenState();
+  _UserAccountPageState createState() => _UserAccountPageState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
-  // Przechowywane dane profilu
+class _UserAccountPageState extends State<UserAccountPage> {
   String name = "Jan Kowalski";
   String email = "jan.kowalski@example.com";
   String phone = "+48 123 456 789";
@@ -51,8 +50,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 );
-
-                // Jeśli użytkownik zaktualizował dane, odświeżamy je na ekranie
                 if (updatedProfile != null) {
                   setState(() {
                     name = updatedProfile['name'];

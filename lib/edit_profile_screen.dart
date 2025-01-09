@@ -26,7 +26,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   void initState() {
     super.initState();
-    // Inicjalizujemy kontrolery z aktualnymi danymi
     nameController = TextEditingController(text: widget.name);
     emailController = TextEditingController(text: widget.email);
     phoneController = TextEditingController(text: widget.phone);
@@ -75,7 +74,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // Przekazujemy zaktualizowane dane do ekranu głównego
                 Navigator.pop(context, {
                   'name': nameController.text,
                   'email': emailController.text,
